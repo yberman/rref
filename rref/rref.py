@@ -1,6 +1,9 @@
 import numpy as np
 
 def rref(m, p):
+    """
+    Reduced Row Echelon Form, modulo p.
+    """
     pivots = []
     ir = 0
     for ic in range(m.shape[1]):
@@ -29,6 +32,9 @@ def rref(m, p):
     return m, pivots
 
 def nullspace(m, p):
+    """
+    Null space modulo p.
+    """
     m, pivots = rref(m, p)
     pivot_d = {}
     for k,v in pivots:
