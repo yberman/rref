@@ -45,7 +45,6 @@ def nullspace(m, p):
     for ic in range(m.shape[1]):
         if ic in pivot_c:
             continue
-        print('c', ic, m[:,ic])
         v = np.zeros((m.shape[1], 1), dtype=m.dtype)
         v[ic, 0] = 1
         for ir, x in enumerate(m[:,ic]):
